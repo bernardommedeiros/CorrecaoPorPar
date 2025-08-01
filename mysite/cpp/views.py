@@ -50,4 +50,4 @@ class NovaAvaliacaoView(View):
                 )
                 if id_avaliacao:
                     return redirect('/avaliacao/{}/'.format(id_avaliacao))
-
+ 

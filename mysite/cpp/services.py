@@ -39,3 +39,8 @@ class ServicoTurma():
         )
         aval.save()
         return aval.id
+    
+
+''' Serviço Envio de respostas
+ class ServicoEnvioReposta:
+     def submeter_resposta(self, aluno, avaliacao, diagrama, observacao): '''

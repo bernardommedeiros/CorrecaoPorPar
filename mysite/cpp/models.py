@@ -87,7 +87,7 @@ class CorrecaoPorPar(Correcao):
     def __str__(self):
         return "Correcao por par ({})".format(self.id)
 
-## Classe Professor
+## Classe Resposta
 #############################
 class Resposta(models.Model):
     submissao = models.DateTimeField(auto_now_add=True)
@@ -98,6 +98,9 @@ class Resposta(models.Model):
     correcao = models.OneToOneField(
         Correcao, on_delete=models.CASCADE, null=True, blank=True
     )
+    '''class Meta:
+        unique_together = ['aluno', 'avaliacao']'''
+        
     def __str__(self):
         return "Resposta ({})".format(self.id)
     def set_correcao(self, correcao):
